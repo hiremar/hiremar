@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300" role="img" aria-label="Hiremar Soares — Meteorologia Aeronáutica">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#08131d"/><stop offset=".55" stop-color="#0d2238"/><stop offset="1" stop-color="#14426b"/>
+    </linearGradient>
+    <linearGradient id="sweep" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#00e5ff" stop-opacity="0"/><stop offset="1" stop-color="#00e5ff" stop-opacity=".55"/>
+    </linearGradient>
+    <clipPath id="radarclip"><circle cx="1030" cy="150" r="120"/></clipPath>
+  </defs>
+
+  <rect width="1200" height="300" fill="url(#bg)"/>
+
+  <!-- grade de latitude/longitude -->
+  <g stroke="#2f8fb0" stroke-opacity=".14" stroke-width="1">
+    <path d="M0 50H1200M0 100H1200M0 150H1200M0 200H1200M0 250H1200"/>
+    <path d="M100 0V300M250 0V300M400 0V300M550 0V300M700 0V300M850 0V300M1000 0V300M1150 0V300"/>
+  </g>
+
+  <!-- isóbaras: linhas tracejadas que "correm" (vento) -->
+  <g fill="none" stroke="#3fb5d8" stroke-linecap="round">
+    <path d="M-20 230C170 150 330 270 520 190S850 110 1220 190" stroke-opacity=".55" stroke-width="1.6" stroke-dasharray="3 11">
+      <animate attributeName="stroke-dashoffset" from="0" to="-56" dur="3s" repeatCount="indefinite"/></path>
+    <path d="M-20 195C170 115 330 235 520 155S850 75 1220 155" stroke-opacity=".45" stroke-width="1.6" stroke-dasharray="3 11">
+      <animate attributeName="stroke-dashoffset" from="0" to="-56" dur="4s" repeatCount="indefinite"/></path>
+    <path d="M-20 160C170 80 330 200 520 120S850 40 1220 120" stroke-opacity=".35" stroke-width="1.6" stroke-dasharray="3 11">
+      <animate attributeName="stroke-dashoffset" from="0" to="-56" dur="5s" repeatCount="indefinite"/></path>
+    <path d="M-20 265C170 185 330 305 520 225S850 145 1220 225" stroke-opacity=".3" stroke-width="1.6" stroke-dasharray="3 11">
+      <animate attributeName="stroke-dashoffset" from="0" to="-56" dur="6s" repeatCount="indefinite"/></path>
+  </g>
+
+  <!-- radar meteorológico -->
+  <g>
+    <g fill="none" stroke="#00e5ff" stroke-opacity=".35">
+      <circle cx="1030" cy="150" r="40"/><circle cx="1030" cy="150" r="80"/><circle cx="1030" cy="150" r="120"/>
+      <path d="M910 150H1150M1030 30V270" stroke-opacity=".25"/>
+    </g>
+    <g clip-path="url(#radarclip)">
+      <path d="M1030 150L1150 150A120 120 0 0 0 1115 65Z" fill="url(#sweep)">
+        <animateTransform attributeName="transform" type="rotate" from="0 1030 150" to="360 1030 150" dur="6s" repeatCount="indefinite"/>
+      </path>
+    </g>
+    <!-- "ecos" de chuva/tempestade -->
+    <g>
+      <circle cx="985" cy="118" r="9" fill="#2ecc71" opacity=".75"><animate attributeName="opacity" values=".2;.8;.2" dur="6s" repeatCount="indefinite"/></circle>
+      <circle cx="1070" cy="105" r="7" fill="#f1c40f" opacity=".75"><animate attributeName="opacity" values=".8;.2;.8" dur="6s" repeatCount="indefinite"/></circle>
+      <circle cx="1052" cy="190" r="11" fill="#e74c3c" opacity=".7"><animate attributeName="opacity" values=".25;.85;.25" dur="6s" begin="1.5s" repeatCount="indefinite"/></circle>
+      <circle cx="1000" cy="200" r="6" fill="#2ecc71" opacity=".7"><animate attributeName="opacity" values=".7;.15;.7" dur="6s" repeatCount="indefinite"/></circle>
+    </g>
+  </g>
+
+  <!-- textos -->
+  <g font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif">
+    <text x="70" y="78" fill="#00d4e6" font-size="15" font-weight="700" letter-spacing="4">METEOROLOGIA AERONÁUTICA</text>
+    <text x="70" y="150" fill="#f1c40f" font-size="64" font-weight="800">Hiremar Soares</text>
+    <text x="72" y="190" fill="#d6e2ec" font-size="22">Meteorologista · Professor universitário · Instrutor</text>
+
+    <!-- frases que se alternam -->
+    <g font-size="20" fill="#9fe6f2" font-family="Consolas, 'Courier New', monospace">
+      <text x="72" y="240">&gt; METAR · TAF · SIGMET · GOES-19
+        <animate attributeName="opacity" values="1;1;0;0;0;0;1" keyTimes="0;.28;.33;.62;.66;.95;1" dur="12s" repeatCount="indefinite"/></text>
+      <text x="72" y="240">&gt; Ensino e segurança de voo
+        <animate attributeName="opacity" values="0;0;1;1;0;0;0" keyTimes="0;.28;.33;.62;.66;.95;1" dur="12s" repeatCount="indefinite"/></text>
+      <text x="72" y="240">&gt; Formação de pilotos, DOVs e comissários
+        <animate attributeName="opacity" values="0;0;0;0;1;1;0" keyTimes="0;.28;.33;.62;.66;.95;1" dur="12s" repeatCount="indefinite"/></text>
+    </g>
+  </g>
+</svg>

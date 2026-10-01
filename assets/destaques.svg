@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="130" viewBox="0 0 1200 130" role="img" aria-label="Marcos da carreira: 2005, 2012, 2017, 2021">
+  <defs>
+    <linearGradient id="card" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#16304a"/><stop offset="1" stop-color="#0f2236"/></linearGradient>
+  </defs>
+  <rect width="1200" height="130" fill="#0b1a27" rx="14"/>
+  <g font-family="'Segoe UI', 'Helvetica Neue', Arial, sans-serif" text-anchor="middle">
+    <g>
+      <rect x="14" y="14" width="278" height="102" rx="14" fill="url(#card)" stroke="#2c5373"/>
+      <text x="153" y="64" fill="#f1c40f" font-size="40" font-weight="800">2005</text>
+      <text x="153" y="94" fill="#b9cbd9" font-size="15">na meteorologia operacional</text>
+    </g>
+    <g>
+      <rect x="314" y="14" width="278" height="102" rx="14" fill="url(#card)" stroke="#2c5373"/>
+      <text x="453" y="64" fill="#f1c40f" font-size="40" font-weight="800">2012</text>
+      <text x="453" y="94" fill="#b9cbd9" font-size="15">instrutor de meteorologia</text>
+    </g>
+    <g>
+      <rect x="614" y="14" width="278" height="102" rx="14" fill="url(#card)" stroke="#2c5373"/>
+      <text x="753" y="64" fill="#f1c40f" font-size="40" font-weight="800">2017</text>
+      <text x="753" y="94" fill="#b9cbd9" font-size="15">professor universitário</text>
+    </g>
+    <g>
+      <rect x="914" y="14" width="272" height="102" rx="14" fill="url(#card)" stroke="#2c5373"/>
+      <text x="1050" y="64" fill="#f1c40f" font-size="40" font-weight="800">2021</text>
+      <text x="1050" y="94" fill="#b9cbd9" font-size="15">livro publicado</text>
+    </g>
+  </g>
+</svg>
